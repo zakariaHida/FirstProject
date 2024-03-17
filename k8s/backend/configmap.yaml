@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: spaceland-config
+data:
+  DB_USERNAME: alien
+  DB_NAME: spaceland
+  DB_HOST: spaceland-db-svc
+  DB_PORT: "5432"

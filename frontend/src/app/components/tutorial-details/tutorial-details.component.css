@@ -1,0 +1,14 @@
+.edit-form {
+  max-width: 400px;
+  margin: auto;
+}
+.card {
+  background-color: rgba(255, 255, 255, 0.7); 
+  border: 1px solid rgba(0, 0, 0, 0.1); 
+  border-radius: 5px; 
+  margin-bottom: 5px; 
+  padding: 10px; 
+}
+.card:hover {
+  background-color: rgba(255, 255, 255, 1); 
+}

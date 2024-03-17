@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: spaceland-front
+  name: spaceland-front
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spaceland-front
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: spaceland-front
+    spec:
+      containers:
+      - name: spaceland-front
+        image: zakaria37/imagefrontend:latest
+        ports:
+          - containerPort: 80
+          - containerPort: 443
+        resources: 
+            requests:
+              memory: "100Mi"
+              cpu: "100m"
+            limits:
+              memory: "500Mi"
+              cpu: "500m"
+        imagePullPolicy: Always

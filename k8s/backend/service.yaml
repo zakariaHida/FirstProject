@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: spaceland-backend-service
+spec:
+  type: ClusterIP
+  selector:
+    app: spaceland-backend
+  ports:
+    - protocol: TCP
+      port: 9090
+      targetPort: 9090

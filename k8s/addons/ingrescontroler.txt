@@ -1,0 +1,1 @@
+helm install my-nginx-ingress-controller bitnami/nginx-ingress-controller --version 9.9.5

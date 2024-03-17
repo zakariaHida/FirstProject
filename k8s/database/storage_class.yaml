@@ -1,0 +1,10 @@
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+allowVolumeExpansion: true
+metadata:
+  name: sc-spaceland
+provisioner: kubernetes.io/gce-pd
+reclaimPolicy: Retain
+parameters:
+  type: pd-ssd
+volumeBindingMode: Immediate

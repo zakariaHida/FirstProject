@@ -1,0 +1,28 @@
+.list {
+  background-image: url('src/assets/logo3.png'); /* Replace with the path to your background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* Set a minimum height to cover the entire viewport */
+  color: #000000; /* Set text color to white or a contrasting color for better readability */
+  padding: 1px; /* Adjust padding as needed */
+}
+
+/* You might need to style the input, button, and other elements for better visibility on the background */
+.list input, .list button {
+  background-color: rgba(255, 255, 255, 0.7); /* Adjust the background color for better visibility */
+}
+
+.list h4 {
+  color: #fff; 
+}
+.list-group-item {
+  background-color: rgba(255, 255, 255, 0.7); 
+  border: 1px solid rgba(0, 0, 0, 0.1); 
+  border-radius: 5px; 
+  margin-bottom: 5px; 
+  padding: 10px; 
+}
+.list-group-item:hover {
+  background-color: rgba(255, 255, 255, 1); 
+}

@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spaceland-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spaceland-backend
+  template:
+    metadata:
+      labels:
+        app: spaceland-backend
+    spec:
+      containers:
+      - name: spaceland-backend
+        image: zakaria37/imagebackend:latest
+        env:
+          - name: DB_USERNAME
+            valueFrom:
+              configMapKeyRef:
+                name: spaceland-config
+                key: DB_USERNAME
+          - name: DB_NAME
+            valueFrom:
+              configMapKeyRef:
+                name: spaceland-config
+                key: DB_NAME
+          - name: DB_HOST
+            valueFrom:
+              configMapKeyRef:
+                name: spaceland-config
+                key: DB_HOST
+          - name: DB_PORT
+            valueFrom:
+              configMapKeyRef:
+                name: spaceland-config
+                key: DB_PORT
+          - name: DB_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: spaceland-secrete
+                key: DB_PASSWORD
+        ports:
+        - containerPort: 9090
